@@ -1,0 +1,30 @@
+<DreamToneInterface>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 20
+
+    canvas.before:
+        Color:
+            rgba: 0.1, 0.1, 0.1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        text: "LoGaNLab - Configuración de Tono"
+        font_size: '24sp'
+        size_hint_y: None
+        height: 80
+        color: 0, 0.7, 1, 1
+
+    Button:
+        text: "Seleccionar Tono de Llamada"
+        size_hint_y: None
+        height: 100
+        background_color: 0, 0.5, 0.8, 1
+        on_release: root.elegir_archivo('entrada')
+
+    Label:
+        text: "El servicio se ejecuta automáticamente en segundo plano."
+        font_size: '14sp'
+        color: 0.6, 0.6, 0.6, 1

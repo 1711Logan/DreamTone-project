@@ -21,3 +21,9 @@ jobs:
       - name: Build with Buildozer
         run: |
           yes | buildozer android debug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: DreamTone-Package
+          path: bin/*.apk

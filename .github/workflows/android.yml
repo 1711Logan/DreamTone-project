@@ -1,0 +1,14 @@
+name: Build APK
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build with Buildozer
+        uses: kivy/buildozer-action@master
+        with:
+          save_buildozer_cache: true
+          python_version: 3.10

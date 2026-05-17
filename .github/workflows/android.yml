@@ -7,6 +7,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Create RAM Swap (Memoria Extra)
+        run: |
+          sudo swapoff -a
+          sudo dd if=/dev/zero of=/swapfile bs=1M count=6144
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
+          free -h
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:

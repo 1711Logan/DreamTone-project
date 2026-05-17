@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3, kivy==2.2.1, sdl2_ttf, sdl2_image, sdl2_mixer, sdl2
+requirements = python3, hostpython3, kivy==2.2.1, sdl2_ttf, sdl2_image, sdl2_mixer, sdl2
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -116,6 +116,8 @@ android.ndk = 25b
 android.ndk_api = 26
 
 android.extra_cflags = -O0 
+
+android.meta_building_cores = 1
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True

@@ -20,6 +20,8 @@ jobs:
 
       - name: Build with Buildozer
         run: |
+          buildozer android clean
+          export GRADLE_OPTS="-Xmx4g -XX:MaxMetaspaceSize=1g"
           yes | buildozer android debug
 
       - name: Upload APK

@@ -29,7 +29,9 @@ jobs:
 
       - name: Build with Buildozer
         run: |
+          pip install --upgrade "kivy<2.3.0"
           export GRADLE_OPTS="-Xmx4g -XX:MaxMetaspaceSize=1g"
+          buildozer android p4a clean
           yes | buildozer android debug
 
       - name: Upload APK

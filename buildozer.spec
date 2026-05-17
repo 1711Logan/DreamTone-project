@@ -115,7 +115,7 @@ android.ndk = 25b
 # (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
 android.ndk_api = 26
 
-android.extra_cflags = -O0
+android.extra_cflags = -O0 -DHB_NO_MT -DHB_NO_OT_SHAPER_ARABIC -DHB_NO_OT_SHAPER_KHMER -DHB_NO_OT_SHAPER_MYANMAR -DHB_NO_OT_SHAPER_THAI
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True

@@ -31,7 +31,7 @@ jobs:
         run: |
           rm -rf ~/.buildozer
           export GRADLE_OPTS="-Xmx4g -XX:MaxMetaspaceSize=1g"
-          export P4A_EXTRA_CFLAGS="-O0 -DHB_NO_MT -DHB_NO_OT_SHAPER_ARABIC -DHB_NO_OT_SHAPER_KHMER -DHB_NO_OT_SHAPER_MYANMAR -DHB_NO_OT_SHAPER_THAI"
+          export P4A_NUM_CORES=1
           yes | buildozer android debug
 
       - name: Upload APK
